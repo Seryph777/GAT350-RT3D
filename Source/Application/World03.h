@@ -1,10 +1,12 @@
 #pragma once
 #include "Framework/World.h"
 #include "Core/Math/Vector2.h"
+#include "Renderer/Renderer.h"
+#include <vector>
 
 namespace nc
 {
-	class World01 : public World
+	class World03 : public World
 	{
 	public:
 		bool Initialize() override;
@@ -16,8 +18,13 @@ namespace nc
 		float b = 0;
 
 	private:
-		float m_angle = 0;
 		float m_time;
-		vec2 m_position;
+		float m_speed = 5;
+
+		Transform m_transform;
+
+		GLuint m_vao;
+		res_t<Program> m_program;
+		res_t<Texture> m_texture;
 	};
 }

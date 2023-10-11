@@ -5,8 +5,6 @@
 
 namespace nc
 {
-    float a = 1;
-    float b = 0;
 
     bool World01::Initialize()
     {
